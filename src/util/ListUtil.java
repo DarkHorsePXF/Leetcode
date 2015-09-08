@@ -36,4 +36,19 @@ public class ListUtil {
         }
         return head.next;
     }
+
+    public static ListNode createList(int[] nums){
+        if (nums==null||nums.length==0){
+            return null;
+        }
+        int length = nums.length;
+        ListNode head = new ListNode(0);
+        ListNode node = head;
+        for (int i = 0; i < length; i++) {
+            int val = nums[i];
+            node.next = new ListNode(val);
+            node = node.next;
+        }
+        return head.next;
+    }
 }
